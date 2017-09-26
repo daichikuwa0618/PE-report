@@ -1,0 +1,56 @@
+\documentclass[a4paper,11pt, uplatex, fleqn]{jsarticle}
+
+% 余白の設定
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{40\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.2in}
+\setlength{\topmargin}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
+
+% パッケージ
+\usepackage[dvipdfmx]{graphicx}     % 画像
+\usepackage{amsmath, amssymb}       % ギリシャ文字
+\usepackage{bm}                     % 数式
+\usepackage{comment}                % コメント
+\usepackage{siunitx}                % SI単位
+\usepackage{framed}                 % 枠組み
+\usepackage{color}                  %色の使用
+\usepackage{type1cm}                %エラー対策
+\usepackage{cases}
+
+% 表紙の設定
+\makeatletter
+\def\lst@lettertrue{\let\lst@ifletter\iffalse}
+\def\@thesis{  工学部(機会知能・航空工学科) 編入学試験\\}
+\def\id#1{\def\@id{#1}}
+\def\department#1{\def\@department{#1}}
+
+\def\@maketitle{
+\begin{center}
+{\LARGE \@thesis}
+\vspace{5mm}
+{\LARGE \@title \\}
+\vspace{5mm}
+{\Large 試験日: \@date\\}  % 作成日
+\vspace{5mm}
+{\Large 試験会場: \@id\\}   % 作成日
+\vspace{5mm}
+{\Large \@department}     % 所属
+{\Large 氏名: \@author\\}
+\vspace{5mm}
+\end{center}
+}
+
+% 表紙の中身
+\makeatother
+\title{  合否: 合格}
+\date{2017年8月21日(学力試験) 22日(面接試験)}
+\id{東北大学 青葉山キャンパス 工学部 中央棟}
+\department{米子高専 13332}
+\author{林大地}
+
+\begin{document}
+\maketitle
+\end{document}
