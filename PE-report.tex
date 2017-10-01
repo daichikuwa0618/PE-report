@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt, uplatex, fleqn]{jsarticle}
+\documentclass[a4paper,12pt, uplatex, fleqn]{jsarticle}
 
 % 余白の設定
 \setlength{\textwidth}{\fullwidth}
@@ -16,41 +16,64 @@
 \usepackage{comment}                % コメント
 \usepackage{siunitx}                % SI単位
 \usepackage{framed}                 % 枠組み
-\usepackage{color}                  %色の使用
-\usepackage{type1cm}                %エラー対策
-\usepackage{cases}
-
-% 表紙の設定
-\makeatletter
-\def\lst@lettertrue{\let\lst@ifletter\iffalse}
-\def\@thesis{  工学部(機会知能・航空工学科) 編入学試験\\}
-\def\id#1{\def\@id{#1}}
-\def\department#1{\def\@department{#1}}
-
-\def\@maketitle{
-\begin{center}
-{\LARGE \@thesis}
-\vspace{5mm}
-{\LARGE \@title \\}
-\vspace{5mm}
-{\Large 試験日: \@date\\}  % 作成日
-\vspace{5mm}
-{\Large 試験会場: \@id\\}   % 作成日
-\vspace{5mm}
-{\Large \@department}     % 所属
-{\Large 氏名: \@author\\}
-\vspace{5mm}
-\end{center}
-}
+\usepackage{color}                  % 色の使用
+\usepackage{type1cm}                % エラー対策
+\usepackage{cases}                  % 行列
 
 % 表紙の中身
 \makeatother
-\title{  合否: 合格}
-\date{2017年8月21日(学力試験) 22日(面接試験)}
-\id{東北大学 青葉山キャンパス 工学部 中央棟}
-\department{米子高専 13332}
+\title{}
+\date{}
+\id{13332}
+\department{}
 \author{林大地}
 
 \begin{document}
-\maketitle
+\section{行動による心拍数の変化}
+記録をとった1週間の行動を以下のように分類した。
+\begin{enumerate}
+    \item 朝食
+    \item 昼食
+    \item 夕食
+    \item 授業
+    \item 受験勉強
+    \item 休憩
+    \item 卒業研究
+    \item 運動(体育も含む)
+    \item 休憩 (自由時間)
+    \item シャワー (お風呂)
+    \item 睡眠中
+\end{enumerate}
+
+以下に測定結果からまとめた表を示す。また、行動がない場合や、測定ができていない箇所は空欄とした。
+
+\begin{conter}
+    \begin{tabular}{|l|rrrrr|} \hline
+        & 7月25日 & 7月26日 & 7月28日 & 7月29日 & 7月31日 \\ \hline
+        朝食 &  & 65 & 73 & 50 & 60 \\ \hline
+        昼食 & 80 & 85 & 80 & 85 & 100 \\ \hline
+        夕食 & 82 & 72 & 78 & 65 & 80 \\ \hline
+        授業 & 75 & 85 & 80 &  & 100 \\ \hline
+        受験勉強 & 80 & 85 & 75 & 70 & 73 \\ \hline
+        休憩 & 85 & 90 & 90 &  & 110 \\ \hline
+        卒業研究 &  & 85 & 75 &  & 80 \\ \hline
+        運動 &  &  &  &  & 145 \\ \hline
+        自由時間 & 78 & 70 &  & 80 &  \\ \hline
+        シャワー & 82 & 75 & 90 & 88 & 70 \\ \hline
+        睡眠中 & 50 & 51 & 48 & 50 & 48 \\ \hline
+    \end{tabular}
+\end{conter}
+
+\section{授業による心拍数の変化}
+
+
+\section{日常の運動を継続することによる影響}
+
+\section{エネルギー消費量の考察}
+
+\section{深睡眠時間の考察}
+
+\section{結果から最適な運動の提案}
+
+
 \end{document}
